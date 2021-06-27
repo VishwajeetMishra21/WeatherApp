@@ -63,21 +63,20 @@ class MainActivity : AppCompatActivity() {
 
                 val queue = Volley.newRequestQueue(this@MainActivity)
                 val jsonObjectRequest = object : JsonObjectRequest(Request.Method.GET,url,null,
-                    Response.Listener {
+                    Response.Listener { response->
 
                         try {
-                            println("Response is $it")
 
-                            val jsonObject = it.getJSONObject("main")
+                            val jsonObject = response.getJSONObject("main")
 
                             temp.text = jsonObject.getString("temp")
                             humidity.text = jsonObject.getString("humidity")
-                            names.text = country
+                            names.text = response.getString("name")
 
-                            val json = it.getJSONObject("wind")
+                            val json = response.getJSONObject("wind")
                             speed.text = json.getString("speed")
                             degree.text = json.getString("deg")
-                            val data = it.getJSONArray("weather")
+                            val data = response.getJSONArray("weather")
                             for(i in 0 until data.length()) {
                                 val jsonRe = data.getJSONObject(i)
                                 name.text = jsonRe.getString("description")
@@ -126,28 +125,27 @@ class MainActivity : AppCompatActivity() {
 
                 val queue = Volley.newRequestQueue(this@MainActivity)
                 val jsonObjectRequest = object : JsonObjectRequest(Request.Method.GET,link,null,
-                    Response.Listener {
+                    Response.Listener {response->
 
                         try {
-                            println("Response is $it")
 
-                            val jsonObject = it.getJSONObject("main")
+                            val jsonObject = response.getJSONObject("main")
 
                             temp.text = jsonObject.getString("temp")
                             humidity.text = jsonObject.getString("humidity")
-                            names.text = country
+                            names.text = response.getString("name")
 
-                            val json = it.getJSONObject("wind")
+                            val json = response.getJSONObject("wind")
                             speed.text = json.getString("speed")
                             degree.text = json.getString("deg")
-                            val data = it.getJSONArray("weather")
+                            val data = response.getJSONArray("weather")
                             for(i in 0 until data.length()) {
                                 val jsonRe = data.getJSONObject(i)
                                 name.text = jsonRe.getString("description")
                             }
 
                         }catch (e:JSONException) {
-                            Toast.makeText(this@MainActivity,"JSON exception $it",Toast.LENGTH_SHORT).show()
+                            Toast.makeText(this@MainActivity,"JSON exception $response",Toast.LENGTH_SHORT).show()
                         }
 
                     },

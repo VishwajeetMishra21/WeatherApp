@@ -25,4 +25,9 @@ class SplashScreen : AppCompatActivity() {
 
     }
 
+    override fun onPause() {
+        super.onPause()
+        finish()
+    }
+
 }
