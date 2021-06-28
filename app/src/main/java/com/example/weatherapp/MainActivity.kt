@@ -2,7 +2,12 @@ package com.example.weatherapp
 
 
 import android.app.Activity
+import android.content.Context
 import android.content.Intent
+import android.content.pm.PackageManager
+import android.location.Location
+import android.location.LocationListener
+import android.location.LocationManager
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.provider.Settings
@@ -16,6 +21,8 @@ import com.android.volley.Request
 import com.android.volley.Response
 import com.android.volley.toolbox.JsonObjectRequest
 import com.android.volley.toolbox.Volley
+import com.google.android.gms.location.FusedLocationProviderClient
+import com.google.android.gms.location.LocationServices
 import org.json.JSONException
 import java.util.*
 import kotlin.collections.HashMap
@@ -30,6 +37,8 @@ class MainActivity : AppCompatActivity() {
     lateinit var temp : TextView
     lateinit var humidity : TextView
     lateinit var speed : TextView
+
+
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -50,6 +59,7 @@ class MainActivity : AppCompatActivity() {
             search()
         }
     }
+
     fun search() {
 
         val country = searchBar.text.toString()
