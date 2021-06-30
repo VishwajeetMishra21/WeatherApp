@@ -16,6 +16,7 @@
         android:src="@drawable/img" />
 
     <EditText
+        android:hint="Enter State,Country"
         android:id="@+id/searchBar"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
