@@ -47,8 +47,11 @@ class MainActivity : AppCompatActivity() {
         humidity = findViewById(R.id.humidity)
         speed = findViewById(R.id.speed)
 
+        //for the default weather of country/state/...
         search()
 
+
+        //For searching when user search for the state district country
         search.setOnClickListener {
             search()
         }
