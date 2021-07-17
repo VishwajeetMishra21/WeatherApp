@@ -16,12 +16,12 @@
         android:src="@drawable/img" />
 
     <EditText
-        android:hint="Enter State,Country"
         android:id="@+id/searchBar"
         android:layout_width="270dp"
         android:layout_height="wrap_content"
         android:layout_centerHorizontal="true"
         android:layout_marginTop="39dp"
+        android:hint="Enter State,Country"
         android:inputType="text"
         android:maxLines="1" />
 
@@ -40,8 +40,8 @@
         android:layout_width="200dp"
         android:layout_height="380dp"
         android:layout_gravity="center"
-        android:layout_marginTop="250dp"
         android:layout_marginLeft="100dp"
+        android:layout_marginTop="250dp"
         android:elevation="8dp"
         app:cardCornerRadius="35dp">
 
@@ -63,10 +63,11 @@
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
                     android:layout_marginTop="10dp"
+                    android:fontFamily="casual"
                     android:text="N/A"
-                    android:textSize="21sp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="#0289ff" />
+                    android:textColor="#0289ff"
+                    android:textSize="21sp" />
 
                 <pl.droidsonroids.gif.GifImageView
                     android:id="@+id/image"
@@ -80,10 +81,11 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="casual"
                     android:text="N/A"
-                    android:textSize="21sp"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    android:textColor="#0289ff" />
+                    android:textColor="#0289ff"
+                    android:textSize="21sp" />
             </LinearLayout>
 
             <LinearLayout
@@ -98,11 +100,10 @@
                     android:layout_width="wrap_content"
                     android:layout_height="wrap_content"
                     android:layout_gravity="center"
+                    android:fontFamily="casual"
                     android:text="N/A"
-                    android:textSize="20sp"
-                    android:fontFamily="monospace"
                     android:textAppearance="@style/TextAppearance.AppCompat.Large"
-                    />
+                    android:textSize="20sp" />
 
                 <RelativeLayout
                     android:layout_width="match_parent"
@@ -113,7 +114,9 @@
                         android:id="@+id/one"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Temp" />
+                        android:fontFamily="casual"
+                        android:text="Temp"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/temp"
@@ -121,7 +124,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignRight="@id/one"
                         android:layout_alignParentRight="true"
-                        android:text="N/A" />
+                        android:fontFamily="casual"
+                        android:text="N/A"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
@@ -134,7 +139,9 @@
                         android:id="@+id/two"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Humidity" />
+                        android:fontFamily="casual"
+                        android:text="Humidity"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/humidity"
@@ -142,7 +149,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignRight="@id/two"
                         android:layout_alignParentRight="true"
-                        android:text="N/A" />
+                        android:fontFamily="casual"
+                        android:text="N/A"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
 
@@ -155,7 +164,9 @@
                         android:id="@+id/three"
                         android:layout_width="wrap_content"
                         android:layout_height="wrap_content"
-                        android:text="Speed" />
+                        android:fontFamily="casual"
+                        android:text="Speed"
+                        android:textStyle="bold" />
 
                     <TextView
                         android:id="@+id/speed"
@@ -163,7 +174,9 @@
                         android:layout_height="wrap_content"
                         android:layout_alignRight="@id/three"
                         android:layout_alignParentRight="true"
-                        android:text="N/A" />
+                        android:fontFamily="casual"
+                        android:text="N/A"
+                        android:textStyle="bold" />
 
                 </RelativeLayout>
             </LinearLayout>
